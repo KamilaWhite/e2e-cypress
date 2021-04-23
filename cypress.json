@@ -1,1 +1,12 @@
-{}
+{
+    "viewportWidth": 1900,
+    "viewportHeight": 1600,
+    "defaultCommandTimeout": 5000,
+    "e2e": {
+        "defaultCommandTimeout": 20000,
+    "retries": {
+        "runMode": 1,
+        "openMode": 1
+    }
+    }
+}
