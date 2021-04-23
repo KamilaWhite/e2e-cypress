@@ -10,16 +10,27 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+Cypress.Commands.add("checkIf404TextNotExists", () => {
+    cy.contains("Przepraszamy, spróbuj za chwilę").should("not.exist");
+  });
+  Cypress.Commands.add("checkIf500TextNotExists", () => {
+    cy.contains("Nie mogliśmy znaleźć takiej strony").should("not.exist");
+  });
+  // before(() => {
+  //   cy.visit('');
+  //   cy.setCookie('cookies', "1");
+  //   cy.reload();
+  //   Cypress.Cookies.preserveOnce('cookies');
+  //   });
+  //
+  //
+  // -- This is a child command --
+  // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
+  //
+  //
+  // -- This is a dual command --
+  // Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
+  //
+  //
+  // -- This will overwrite an existing command --
+  // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
