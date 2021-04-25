@@ -16,6 +16,12 @@ Cypress.Commands.add("checkIf404TextNotExists", () => {
   Cypress.Commands.add("checkIf500TextNotExists", () => {
     cy.contains("Nie mogliśmy znaleźć takiej strony").should("not.exist");
   });
+  Cypress.Commands.add("checkIf404TextNotExistsAtTXM", () => {
+    cy.contains(".b-alertPage_text").should("not.exist");
+  });
+  Cypress.Commands.add("checkIf500TextNotExistsAtTXM", () => {
+    cy.contains("Wewnętrzny błąd serwera!").should("not.exist");
+  });
   // before(() => {
   //   cy.visit('');
   //   cy.setCookie('cookies', "1");
