@@ -1,7 +1,6 @@
 {
     "viewportWidth": 1900,
     "viewportHeight": 1600,
-    "failOnStatusCode": false,
     "defaultCommandTimeout": 5000,
     "e2e": {
         "defaultCommandTimeout": 20000,
